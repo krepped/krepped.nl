@@ -113,6 +113,22 @@ if (location.hash) history.replaceState(null, "", location.pathname + location.s
         <div class="reel">
           <!-- one .piece per project. Numbers and the count update themselves.
                data-bg tints the page while the project is on screen. -->
+          <article class="piece" data-bg="#0b0805">
+            <a class="piece-media" href="https://kreplabs.com" target="_blank" rel="noopener" aria-label="Visit Krep Labs">
+              <img src="work/kreplabs.jpg" srcset="work/kreplabs.jpg 1280w" sizes="(max-width: 900px) 100vw, 60vw" alt="Krep Labs, an independent studio" width="1280" height="640" loading="lazy" decoding="async">
+              <span class="piece-num" data-piece-num>01</span>
+              <span class="piece-cta">Visit site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+            </a>
+            <div class="piece-meta">
+              <div>
+                <p class="label">Studio · Brand · Web</p>
+                <h3 class="piece-title">Krep Labs</h3>
+                <p class="piece-desc">My independent studio, and the home for what I build next. I designed the brand and built the site from scratch.</p>
+              </div>
+              <a class="piece-arrow" href="https://kreplabs.com" target="_blank" rel="noopener" aria-label="Visit Krep Labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+
           <article class="piece" data-bg="#060912">
             <a class="piece-media" href="/work/obscura/" aria-label="Explore Obscura">
               <img src="work/obscura.jpg" srcset="work/obscura-1200.jpg 1200w, work/obscura.jpg 2400w" sizes="(max-width: 900px) 100vw, 60vw" alt="Obscura's website on a desktop screen and a phone" width="2400" height="1500" loading="lazy" decoding="async">
@@ -143,20 +159,6 @@ if (location.hash) history.replaceState(null, "", location.pathname + location.s
               </div>
             </div>
           </article>
-
-          <article class="piece is-soon" data-bg="#050f0d">
-            <div class="piece-media">
-              <img src="work/soon-b.jpg?v=2" srcset="work/soon-b-1200.jpg?v=2 1200w, work/soon-b.jpg?v=2 2400w" sizes="(max-width: 900px) 100vw, 60vw" alt="Another project in the works: a blurred screen that says Coming soon" width="2400" height="1500" loading="lazy" decoding="async">
-              <span class="piece-num" data-piece-num>03</span>
-            </div>
-            <div class="piece-meta">
-              <div>
-                <p class="label">Up next</p>
-                <h3 class="piece-title">Coming soon</h3>
-                <p class="piece-desc">And another one after that.</p>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
 
@@ -175,8 +177,8 @@ if (location.hash) history.replaceState(null, "", location.pathname + location.s
         <span class="line"><span data-rise>or just hello.</span></span>
       </h2>
       <div class="contact-mail" data-reveal>
-        <a class="mail" href="mailto:contact@krepped.nl">contact@krepped.nl</a>
-        <button class="copy" type="button" data-copy="contact@krepped.nl">Copy</button>
+        <a class="mail" href="mailto:krep@kreplabs.com">krep@kreplabs.com</a>
+        <button class="copy" type="button" data-copy="krep@kreplabs.com">Copy</button>
       </div>
       <ul class="socials" data-reveal>
         <li><a href="https://github.com/krepped" target="_blank" rel="noopener"><span class="name">GitHub</span><span class="handle">@krepped</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
