@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krep, full-stack developer</title>
+<meta name="description" content="Krep (@krepped), full-stack developer from the Netherlands. Frontend, backend, and the low-level parts most people skip.">
+<meta name="theme-color" content="#050607">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://krepped.nl/">
+<meta property="og:title" content="Krep, full-stack developer">
+<meta property="og:description" content="I build the whole thing.">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Stack+Sans+Headline:wght@300;400;500&family=Stack+Sans+Text:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7">
+<script>
+document.documentElement.classList.add("js");
+// every visit and reload starts at the top: no restored scroll position, no jump to a #section
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+</script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader-top label"><span>krepped.nl</span><span>Compiling</span></div>
+  <div>
+    <div class="loader-count" data-count>000</div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+</div>
+
+<canvas class="gl" aria-hidden="true"></canvas>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Krep, back to top">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 3H22l-3.5 5H4zM9.5 9.5H24l-3.5 5H6zM7.5 16H22l-3.5 5H4z"/></svg>
+    Krep
+  </a>
+  <nav class="menu" aria-label="Main">
+    <a href="#about"><span class="roll"><span>About</span><span aria-hidden="true">About</span></span></a>
+    <a href="#work"><span class="roll"><span>Work</span><span aria-hidden="true">Work</span></span></a>
+    <a href="#contact"><span class="roll"><span>Contact</span><span aria-hidden="true">Contact</span></span></a>
+  </nav>
+  <div class="clock" title="Local time in the Netherlands">NL <time data-clock>--:--:--</time></div>
+</header>
+
+<main id="top">
+
+  <section class="hero" data-theme="dark">
+    <div class="wrap hero-in">
+      <p class="label hero-label" data-intro>Krep / Full-stack developer, Netherlands</p>
+      <h1 class="hero-title">
+        <span class="sr">I build the whole thing.</span>
+        <span class="line" aria-hidden="true"><span class="scramble">I build the</span></span>
+        <span class="line" aria-hidden="true"><span class="scramble">whole thing.</span></span>
+      </h1>
+      <div class="hero-foot" data-intro>
+        <p class="hero-sub">Frontend, backend, and the low-level parts most people skip. From the first line of code to launch day.</p>
+        <a class="btn" href="#work"><span class="roll"><span>See my work</span><span aria-hidden="true">See my work</span></span></a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true" data-intro><i></i>Scroll</div>
+  </section>
+
+  <section class="chapter about" id="about" data-theme="light">
+    <div class="wrap grid">
+      <p class="label col-label" data-reveal>01 / About</p>
+      <div class="col-main">
+        <p class="about-lead" data-words>I'm Krep, a full-stack developer from the Netherlands. I take projects all the way, from the first sketch to the servers they run on. The part I care about most comes after the demo: turning something that works into something people rely on. AI is my main tool for getting there.</p>
+
+        <div class="kit">
+          <div class="kit-col">
+            <h3 class="label kit-head">Languages</h3>
+            <ol class="kit-list"><li>PHP</li><li>Lua / Luau</li><li>Python</li><li>JavaScript</li></ol>
+          </div>
+          <div class="kit-col">
+            <h3 class="label kit-head">Focus</h3>
+            <ol class="kit-list"><li>Full-stack web</li><li>Security</li><li>VM design and obfuscation</li><li>Building with AI</li></ol>
+          </div>
+          <div class="kit-col">
+            <h3 class="label kit-head">Tools</h3>
+            <ol class="kit-list"><li>Claude Code</li><li>Visual Studio Code</li><li>Git / GitHub</li></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work" data-theme="dark" data-bg="#060912">
+    <div class="wrap work-in">
+      <div class="work-head">
+        <div>
+          <p class="label" data-reveal>02 / Selected work <span data-project-count>(01)</span></p>
+          <h2 class="work-title"><span class="line"><span data-rise>Made from scratch.</span></span></h2>
+        </div>
+        <p class="work-note" data-reveal>Built end to end:<br>design, code and servers.</p>
+      </div>
+
+      <div class="reel-wrap">
+        <div class="reel">
+          <!-- one .piece per project. Numbers and the count update themselves.
+               data-bg tints the page while the project is on screen. -->
+          <article class="piece" data-bg="#060912">
+            <a class="piece-media" href="/work/obscura/" aria-label="Explore Obscura">
+              <img src="work/obscura.jpg" srcset="work/obscura-1200.jpg 1200w, work/obscura.jpg 2400w" sizes="(max-width: 900px) 100vw, 60vw" alt="Obscura's website on a desktop screen and a phone" width="2400" height="1500" loading="lazy" decoding="async">
+              <span class="piece-num" data-piece-num>01</span>
+              <span class="piece-cta">Explore project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+            </a>
+            <div class="piece-meta">
+              <div>
+                <p class="label">VM engineering · Full-stack · Design</p>
+                <h3 class="piece-title">Obscura</h3>
+                <p class="piece-desc">Script protection for Roblox, built solo: a virtual machine I wrote from scratch, plus a key system.</p>
+              </div>
+              <a class="piece-arrow" href="/work/obscura/" aria-label="Explore Obscura"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+
+          <!-- coming-soon placeholders: replace one with a real project when it's ready (see CLAUDE.md) -->
+          <article class="piece is-soon" data-bg="#0b0914">
+            <div class="piece-media">
+              <img src="work/soon-a.jpg?v=2" srcset="work/soon-a-1200.jpg?v=2 1200w, work/soon-a.jpg?v=2 2400w" sizes="(max-width: 900px) 100vw, 60vw" alt="A project in the works: a blurred screen that says Coming soon" width="2400" height="1500" loading="lazy" decoding="async">
+              <span class="piece-num" data-piece-num>02</span>
+            </div>
+            <div class="piece-meta">
+              <div>
+                <p class="label">In the works</p>
+                <h3 class="piece-title">Coming soon</h3>
+                <p class="piece-desc">Something new is being built right now.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="piece is-soon" data-bg="#050f0d">
+            <div class="piece-media">
+              <img src="work/soon-b.jpg?v=2" srcset="work/soon-b-1200.jpg?v=2 1200w, work/soon-b.jpg?v=2 2400w" sizes="(max-width: 900px) 100vw, 60vw" alt="Another project in the works: a blurred screen that says Coming soon" width="2400" height="1500" loading="lazy" decoding="async">
+              <span class="piece-num" data-piece-num>03</span>
+            </div>
+            <div class="piece-meta">
+              <div>
+                <p class="label">Up next</p>
+                <h3 class="piece-title">Coming soon</h3>
+                <p class="piece-desc">And another one after that.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="reel-foot" aria-hidden="true">
+        <span class="label reel-hint">Scroll to discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="reel-bar"><i></i></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" data-theme="dark">
+    <div class="wrap">
+      <p class="label" data-reveal>03 / Contact</p>
+      <h2 class="contact-title">
+        <span class="line"><span data-rise>Questions, ideas,</span></span>
+        <span class="line"><span data-rise>or just hello.</span></span>
+      </h2>
+      <div class="contact-mail" data-reveal>
+        <a class="mail" href="mailto:contact@krepped.nl">contact@krepped.nl</a>
+        <button class="copy" type="button" data-copy="contact@krepped.nl">Copy</button>
+      </div>
+      <ul class="socials" data-reveal>
+        <li><a href="https://github.com/krepped" target="_blank" rel="noopener"><span class="name">GitHub</span><span class="handle">@krepped</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/krep/" target="_blank" rel="noopener"><span class="name">LinkedIn</span><span class="handle">in/krep</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://discordapp.com/users/250445392905371648" target="_blank" rel="noopener"><span class="name">Discord</span><span class="handle">krepped</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top" aria-label="Krep, back to top">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 3H22l-3.5 5H4zM9.5 9.5H24l-3.5 5H6zM7.5 16H22l-3.5 5H4z"/></svg>
+      Krep
+    </a>
+    <p class="f1">Krep<br>Full-stack developer, Netherlands</p>
+    <p class="f2">Local time<br><time data-clock>--:--:--</time></p>
+    <p class="f3">© 2026 Krep<br><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+<script src="main.js?v=6" defer></script>
+</body>
+</html>

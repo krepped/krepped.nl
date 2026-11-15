@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obscura, a project by Krep</title>
+<meta name="description" content="Obscura is a Luau obfuscator and key system for Roblox scripts, designed, built and run by Krep.">
+<meta name="theme-color" content="#060912">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://krepped.nl/work/obscura/">
+<meta property="og:title" content="Obscura, a project by Krep">
+<meta property="og:description" content="A Luau obfuscator and key system for Roblox scripts, built solo.">
+<meta property="og:image" content="https://krepped.nl/work/obscura.jpg">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Stack+Sans+Headline:wght@300;400;500&family=Stack+Sans+Text:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=7">
+<script>
+document.documentElement.classList.add("js");
+// every visit and reload starts at the top: no restored scroll position, no jump to a #section
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+</script>
+</head>
+<body class="case">
+
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav">
+  <a class="brand" href="/" aria-label="Krep, home">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 3H22l-3.5 5H4zM9.5 9.5H24l-3.5 5H6zM7.5 16H22l-3.5 5H4z"/></svg>
+    Krep
+  </a>
+  <nav class="menu" aria-label="Main">
+    <a href="/?to=about"><span class="roll"><span>About</span><span aria-hidden="true">About</span></span></a>
+    <a href="/?to=work"><span class="roll"><span>Work</span><span aria-hidden="true">Work</span></span></a>
+    <a href="#contact"><span class="roll"><span>Contact</span><span aria-hidden="true">Contact</span></span></a>
+  </nav>
+  <div class="clock" title="Local time in the Netherlands">NL <time data-clock>--:--:--</time></div>
+</header>
+
+<main id="top">
+
+  <section class="cs-hero" data-theme="dark" data-bg="#060912">
+    <div class="wrap">
+      <div class="cs-top" data-reveal>
+        <a class="label cs-back" href="/?to=work"><span aria-hidden="true">←</span> All work</a>
+        <span class="label">01 / 03</span>
+      </div>
+      <p class="label cs-tags" data-reveal>VM engineering · Full-stack · Design</p>
+      <h1 class="cs-title"><span class="line"><span class="cs-title-text">Obscura</span></span></h1>
+      <p class="cs-lead" data-reveal>A Luau obfuscator and key system for Roblox scripts. Every script is rebuilt into its own virtual machine, and creators decide who gets to run it.</p>
+      <dl class="cs-meta" data-reveal>
+        <div><dt class="label">Role</dt><dd>Everything, solo</dd></div>
+        <div><dt class="label">Scope</dt><dd>Obfuscator · Key system · Dashboard · Website</dd></div>
+        <div><dt class="label">Stack</dt><dd>PHP · Lua · Luau</dd></div>
+        <div><dt class="label">Released</dt><dd><time datetime="2026-07-02">2 July 2026</time></dd></div>
+        <div><dt class="label">Live</dt><dd><a class="cs-link" href="https://obscuravm.com" target="_blank" rel="noopener">obscuravm.com ↗</a></dd></div>
+      </dl>
+    </div>
+    <div class="wrap">
+      <figure class="cs-cover">
+        <div class="cs-cover-in"><img src="/work/obscura.jpg" srcset="/work/obscura-1200.jpg 1200w, /work/obscura.jpg 2400w" sizes="100vw" alt="Obscura's website on a desktop screen and a phone" width="2400" height="1500" decoding="async"></div>
+      </figure>
+    </div>
+  </section>
+
+  <nav class="cs-index" aria-label="Chapters">
+    <div class="wrap cs-index-in">
+      <div class="cs-index-links">
+        <a href="#overview">01 / Overview</a>
+        <a href="#protection">02 / Protection</a>
+        <a href="#keys">03 / Key system</a>
+        <a href="#screens">04 / The product</a>
+        <a href="#numbers">05 / In numbers</a>
+      </div>
+      <a class="cs-visit" href="https://obscuravm.com" target="_blank" rel="noopener">Visit project ↗</a>
+    </div>
+  </nav>
+
+  <section class="cs-chapter" id="overview" data-theme="light">
+    <div class="wrap grid">
+      <p class="label col-label" data-reveal>01 / Overview</p>
+      <div class="col-main">
+        <h2 class="cs-h2"><span class="line"><span data-rise>Stolen scripts,</span></span><span class="line"><span data-rise>made worthless.</span></span></h2>
+        <div class="cs-cols">
+          <p data-reveal>Roblox script creators sell their work, and it gets dumped, re-hosted and leaked. Obscura protects a script in a few seconds and hands back one loader line that runs on every major executor.</p>
+          <p data-reveal>What ships can't be read, and thanks to server-lock a leaked copy does nothing offline. I built all of it on my own, from the virtual machine at the bottom to the dashboard and the website on top.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-chapter" id="protection" data-theme="dark" data-bg="#060912">
+    <div class="wrap grid">
+      <p class="label col-label" data-reveal>02 / Protection</p>
+      <div class="col-main">
+        <h2 class="cs-h2"><span class="line"><span data-rise>Layers between the code</span></span><span class="line"><span data-rise>and everyone else.</span></span></h2>
+        <ol class="cs-list">
+          <li><h3>Per-build virtual machine</h3><p>Every script becomes its own virtual machine, rebuilt from scratch each time it's protected. Break one build and you've learned nothing about the next.</p></li>
+          <li><h3>Server-lock</h3><p>Half the key never ships in the file and only arrives at runtime. A leaked or re-hosted copy is useless without a live, authorized run.</p></li>
+          <li><h3>Full encryption</h3><p>Strings, numbers, constants and logic are encrypted per build. Nothing readable ships inside the file.</p></li>
+          <li><h3>Control-flow flattening</h3><p>The real order the code runs in is hidden, so tracing the flow gives nothing away.</p></li>
+          <li><h3>Anti-dump and anti-hook</h3><p>Dumpers, loadstring hooks and debug tracers only ever reach decoys and junk.</p></li>
+          <li><h3>Runtime anti-tamper</h3><p>The build checks itself while it runs. Change a single byte and it decodes to noise.</p></li>
+          <li><h3>Invisible watermarking</h3><p>Every build carries a hidden owner tag, so a leak traces straight back to whoever shared it.</p></li>
+          <li><h3>Protected in seconds</h3><p>A full script is protected in a few seconds, so shipping an update never means waiting.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-chapter" id="keys" data-theme="dark" data-bg="#060912">
+    <div class="wrap cs-split">
+      <div class="cs-split-text">
+        <p class="label" data-reveal>03 / Key system</p>
+        <h2 class="cs-h2"><span class="line"><span data-rise>Access control,</span></span><span class="line"><span data-rise>built in.</span></span></h2>
+        <p data-reveal>Creators decide who can run their script and get paid for it, with no server of their own to set up. The key page is theirs to brand.</p>
+        <ul class="cs-points">
+          <li>Keys locked to one device, so a shared key stops working</li>
+          <li>Keyless windows and Robux gamepass keys</li>
+          <li>Ad-link checkpoints across ten providers, creators keep 100%</li>
+          <li>A Discord bot for redeeming keys, HWID resets and buyer roles</li>
+          <li>Bans by HWID, IP or Roblox ID that hit every live session at once</li>
+        </ul>
+      </div>
+      <figure class="cs-shot" data-reveal>
+        <div class="cs-frame"><img src="keys.jpg" alt="The key system section of obscuravm.com, with a sample key card" width="1800" height="1125" loading="lazy" decoding="async"></div>
+        <figcaption><span class="label">Homepage</span> The key system, with an example key card.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs-chapter" id="screens" data-theme="dark" data-bg="#060912">
+    <div class="wrap">
+      <div class="grid">
+        <p class="label col-label" data-reveal>04 / The product</p>
+        <div class="col-main">
+          <h2 class="cs-h2"><span class="line"><span data-rise>One platform,</span></span><span class="line"><span data-rise>not three tools.</span></span></h2>
+        </div>
+      </div>
+      <div class="cs-gallery">
+        <figure class="cs-shot wide" data-reveal>
+          <div class="cs-frame"><img src="protection.jpg" alt="The protection section of obscuravm.com, listing the protection layers" width="1800" height="1125" loading="lazy" decoding="async"></div>
+          <figcaption><span class="label">Homepage</span> Every protection layer, explained in a line or two.</figcaption>
+        </figure>
+        <figure class="cs-shot main" data-reveal>
+          <div class="cs-frame"><img src="docs.jpg" alt="The Obscura documentation, opened on the introduction" width="1800" height="1125" loading="lazy" decoding="async"></div>
+          <figcaption><span class="label">Docs</span> Documentation for all of it, from a first script to the REST API.</figcaption>
+        </figure>
+        <figure class="cs-shot side" data-reveal>
+          <div class="cs-frame cs-frame-phone"><img src="mobile.jpg" alt="The Obscura homepage on a phone" width="647" height="1400" loading="lazy" decoding="async"></div>
+          <figcaption><span class="label">Mobile</span> The same site on a phone.</figcaption>
+        </figure>
+        <figure class="cs-shot wide" data-reveal>
+          <div class="cs-frame"><img src="map.jpg" alt="A world map of where Obscura scripts ran in the last 30 days" width="1800" height="1125" loading="lazy" decoding="async"></div>
+          <figcaption><span class="label">Live map</span> Where protected scripts run, updated live.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-chapter" id="numbers" data-theme="light">
+    <div class="wrap grid">
+      <p class="label col-label" data-reveal>05 / In numbers</p>
+      <div class="col-main">
+        <h2 class="cs-h2"><span class="line"><span data-rise>Running, and</span></span><span class="line"><span data-rise>being used.</span></span></h2>
+        <div class="cs-stats">
+          <div class="cs-stat"><span class="cs-num" data-num>3,300+</span><span class="label">Users</span></div>
+          <div class="cs-stat"><span class="cs-num" data-num>3.3M+</span><span class="label">Script runs</span></div>
+          <div class="cs-stat"><span class="cs-num" data-num>21,000+</span><span class="label">Keys created</span></div>
+          <div class="cs-stat"><span class="cs-num" data-num>188</span><span class="label">Countries, last 30 days</span></div>
+          <div class="cs-stat"><span class="cs-num" data-num>13</span><span class="label">Executors supported</span></div>
+          <div class="cs-stat"><span class="cs-num" data-num>8</span><span class="label">Site languages</span></div>
+        </div>
+        <p class="cs-note" data-reveal>From the live counters on obscuravm.com, 10 November 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-next" data-theme="dark" data-bg="#0b0914">
+    <div class="wrap">
+      <p class="label" data-reveal>Up next</p>
+      <p class="cs-next-title" data-soon>Coming soon</p>
+      <p class="cs-next-sub" data-reveal>Something new is being built right now.</p>
+      <a class="label cs-back cs-next-back" href="/?to=work"><span aria-hidden="true">←</span> All work</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" data-theme="dark">
+    <div class="wrap">
+      <p class="label" data-reveal>Contact</p>
+      <h2 class="contact-title">
+        <span class="line"><span data-rise>Questions, ideas,</span></span>
+        <span class="line"><span data-rise>or just hello.</span></span>
+      </h2>
+      <div class="contact-mail" data-reveal>
+        <a class="mail" href="mailto:contact@krepped.nl">contact@krepped.nl</a>
+        <button class="copy" type="button" data-copy="contact@krepped.nl">Copy</button>
+      </div>
+      <ul class="socials" data-reveal>
+        <li><a href="https://github.com/krepped" target="_blank" rel="noopener"><span class="name">GitHub</span><span class="handle">@krepped</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/krep/" target="_blank" rel="noopener"><span class="name">LinkedIn</span><span class="handle">in/krep</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://discordapp.com/users/250445392905371648" target="_blank" rel="noopener"><span class="name">Discord</span><span class="handle">krepped</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="/" aria-label="Krep, home">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 3H22l-3.5 5H4zM9.5 9.5H24l-3.5 5H6zM7.5 16H22l-3.5 5H4z"/></svg>
+      Krep
+    </a>
+    <p class="f1">Krep<br>Full-stack developer, Netherlands</p>
+    <p class="f2">Local time<br><time data-clock>--:--:--</time></p>
+    <p class="f3">© 2026 Krep<br><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+<script src="/project.js?v=1" defer></script>
+</body>
+</html>
